@@ -1,0 +1,41 @@
+
+#============= Atomic informations ===============
+
+NumberOfAtoms    8
+NumberOfSpecies  2
+
+%block ChemicalSpeciesLabel
+	1	15 	 P
+	2	32 	 Ge
+%endblock ChemicalSpeciesLabel
+
+#======== lattice, cell and coordinates ==========
+
+#= lattice constant =
+
+LatticeConstant 1.0 Ang
+
+#== Lattice Vectors - Simulation box ==
+
+%block LatticeVectors
+	7.020679	0.039771	-0.007047
+	3.475950	6.100185	-0.003044
+	-0.009788	0.000621	10.062021
+%endblock LatticeVectors
+
+#=== Coordinates and formats (input and output) ===
+
+AtomicCoordinatesFormat Ang
+AtomCoorFormatOut       Ang
+
+%block AtomicCoordinatesAndAtomicSpecies
+	1.769110	1.023351	4.444345	2
+	3.476245	2.019888	6.010128	1
+	3.464292	4.101356	5.266254	1
+	5.262135	5.150323	6.011364	1
+	7.068027	4.119891	5.256926	1
+	7.080126	2.040634	6.012264	1
+	5.284139	0.990373	5.262050	1
+	8.769282	5.116927	6.828637	2
+%endblock AtomicCoordinatesAndAtomicSpecies
+

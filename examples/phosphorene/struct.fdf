@@ -1,0 +1,44 @@
+
+#============= Atomic informations ===============
+
+NumberOfAtoms    8
+NumberOfSpecies  1
+
+%block ChemicalSpeciesLabel
+	1	15 	 P
+%endblock ChemicalSpeciesLabel
+
+#======== lattice, cell and coordinates ==========
+
+#= lattice constant =
+
+LatticeConstant 6.6304895 Ang
+
+#== Lattice Vectors - Simulation box ==
+
+%block LatticeParameters
+ 1.00000000000000000000    1.00000000000000000000   1.5120603086695183    89.9991     89.9999     59.9993
+%endblock LatticeParameters
+
+#%block LatticeVectors
+#	6.652003	0.000000	0.000000
+#	3.326002	5.760804	0.000000
+#	0.000000	0.000000	9.999956
+#%endblock LatticeVectors
+
+#=== Coordinates and formats (input and output) ===
+
+AtomicCoordinatesFormat Fractional
+AtomCoorFormatOut       Ang
+
+%block AtomicCoordinatesAndAtomicSpecies
+    0.166664985       0.166669159       0.496941377  1 
+    0.333336783       0.333326883       0.623436953  1 
+    0.166669367       0.666664842       0.496938778  1 
+    0.333334030       0.833330188       0.623434244  1 
+    0.666668753       0.666668897       0.496940939  1 
+    0.833330522       0.333327630       0.623433597  1 
+    0.666668024       0.166671510       0.496936907  1 
+    0.833335328       0.833333117       0.623435206  1 
+%endblock AtomicCoordinatesAndAtomicSpecies
+

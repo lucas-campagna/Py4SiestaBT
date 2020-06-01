@@ -1,0 +1,23 @@
+  
+
+Allocation summary at 2020/03/20 10:48:05.977 -03:00
+
+Present memory all nodes :           0.000000 MB
+Added peak mem all nodes :           0.000000 MB
+Min peak memory in a node:           0.000000 MB
+Max peak memory in a node:           0.000000 MB
+
+
+Allocation summary at 2020/03/20 10:48:05.978 -03:00
+
+Present memory all nodes :           0.000000 MB
+Added peak mem all nodes :           0.000000 MB
+Min peak memory in a node:           0.000000 MB
+Max peak memory in a node:           0.000000 MB
+
+Maximum peak of memory occurred in node:     1
+
+Present memory allocation:           0.000000 MB
+Maximum memory allocation:           0.000000 MB
+Occurred after allocating: 
+In routine:                

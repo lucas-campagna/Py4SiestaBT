@@ -1,0 +1,88 @@
+SystemName transition
+SystemLabel transition
+
+%include struct.fdf
+
+%block kgrid_Monkhorst_Pack
+ 4    0    0   0.0
+ 0    4    0   0.0
+ 0    0    1   0.0
+%endblock kgrid_Monkhorst_Pack
+
+#%block GeometryConstraints
+#cellangle alpha beta gamma
+#%endblock GeometryConstraints
+
+MeshCutoff            300  Ry
+MD.VariableCell       F
+
+PAO.BasisSize         DZP
+PAO.EnergyShift       0.01  Ry
+
+
+XC.functional         GGA
+XC.authors            PBE
+
+ElectronicTemperature     50 meV
+
+MD.TypeOfRun          CG
+MD.NumCGsteps         0
+MD.MaxForceTol        0.001  eV/Ang
+MD.FinalTimeStep      1
+
+MaxSCFIterations      600
+DM.MixingWeight       0.8
+DM.NumberPulay        8 
+DM.Tolerance          1.d-4
+
+SolutionMethod       diagon
+ParallelOverK         .true.
+
+UseSaveData           .true.
+MD.UseSaveXV          .true.
+DM.UseSaveDM          .true.
+MD.UseSaveCG          .true.
+
+#==================================================
+#     BAND & PDOS
+#=================================================
+
+#%block ProjectedDensityOfStates
+#-7.46170618 -1.46170618     0.030 2000 eV
+#%endblock ProjectedDensityOfStates
+#
+#%block PDOS.kgrid_Monkhorst_Pack
+#100    0     0   0.0
+# 0    100    0   0.0
+# 0     0     1   0.0
+#%endblock PDOS.kgrid_Monkhorst_Pack
+#
+BandLinesScale    ReciprocalLatticeVectors  
+
+%block BandLines
+1     0.00000    0.00000    0.00000    \Gamma
+150   0.66667    0.33333    0.00000    K
+90    0.50000    0.00000    0.00000    M
+130   0.00000    0.00000    0.00000    \Gamma
+%endblock BandLines
+
+WFS.Write.For.Bands    T
+
+#==================================================
+#     Charge & Properties
+#=================================================
+
+#SaveDeltaRho   T
+
+#==================================================
+#     Theromelectic Properties
+#=================================================
+
+#%block BT.kgrid_Monkhorst_Pack
+#60     0     0   0.0
+# 0    60     0   0.0
+# 0     0     1   0.0
+#%endblock BT.kgrid_Monkhorst_Pack
+#
+#BT.Symprec 0.00001
+
